@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxConsole = new System.Windows.Forms.TextBox();
             this.textBoxSavePath = new System.Windows.Forms.TextBox();
             this.labelSavePath = new System.Windows.Forms.Label();
             this.buttonSavePath = new System.Windows.Forms.Button();
@@ -47,14 +47,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStopIndex)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxConsole
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 177);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(393, 246);
-            this.textBox1.TabIndex = 0;
+            this.textBoxConsole.Location = new System.Drawing.Point(12, 177);
+            this.textBoxConsole.Multiline = true;
+            this.textBoxConsole.Name = "textBoxConsole";
+            this.textBoxConsole.ReadOnly = true;
+            this.textBoxConsole.Size = new System.Drawing.Size(393, 246);
+            this.textBoxConsole.TabIndex = 0;
             // 
             // textBoxSavePath
             // 
@@ -63,7 +63,6 @@
             this.textBoxSavePath.ReadOnly = true;
             this.textBoxSavePath.Size = new System.Drawing.Size(312, 20);
             this.textBoxSavePath.TabIndex = 1;
-            this.textBoxSavePath.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // labelSavePath
             // 
@@ -82,6 +81,7 @@
             this.buttonSavePath.TabIndex = 3;
             this.buttonSavePath.Text = "Browse";
             this.buttonSavePath.UseVisualStyleBackColor = true;
+            this.buttonSavePath.Click += new System.EventHandler(this.buttonSavePath_Click);
             // 
             // labelStartIndex
             // 
@@ -171,7 +171,6 @@
             this.labelIndex.Size = new System.Drawing.Size(73, 13);
             this.labelIndex.TabIndex = 13;
             this.labelIndex.Text = "Current Index:";
-            this.labelIndex.Click += new System.EventHandler(this.labelIndex_Click);
             // 
             // labelIndexCurrent
             // 
@@ -201,7 +200,7 @@
             this.Controls.Add(this.buttonSavePath);
             this.Controls.Add(this.labelSavePath);
             this.Controls.Add(this.textBoxSavePath);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxConsole);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStartIndex)).EndInit();
@@ -213,7 +212,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxConsole;
         private System.Windows.Forms.TextBox textBoxSavePath;
         private System.Windows.Forms.Label labelSavePath;
         private System.Windows.Forms.Button buttonSavePath;

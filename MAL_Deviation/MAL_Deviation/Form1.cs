@@ -17,14 +17,15 @@ namespace MAL_Deviation
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        private void buttonSavePath_Click(object sender, EventArgs e)
+        {
+            
         }
 
-        private void labelIndex_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
     }
 }
