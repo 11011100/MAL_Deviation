@@ -64,9 +64,10 @@ namespace MAL_Deviation
         //Methods
         public void update()
         {
+            getTotalVotes();
             getMean();
             getDeviation();
-            getTotalVotes();
+            
         }
 
         private void getMean()
@@ -74,12 +75,17 @@ namespace MAL_Deviation
             _mean = 0;
             for (int i = 0; i < 10; i++)
             {
-                _mean += _scores[i].Percent * (10 - i) / 10;
+                _mean += _scores[i].Percent/100 * (10 - i);
             }
         }
         private void getDeviation()
         {
-
+            double variance = 0;
+            for(int i=0; i<10; i++)
+            {
+                variance += _scores[i].Percent / 100 * Math.Pow((10-i)-_mean, 2);
+            }
+            _deveation = Math.Sqrt(variance);
         }
         private void getTotalVotes()
         {

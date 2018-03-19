@@ -43,6 +43,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelIndex = new System.Windows.Forms.Label();
             this.labelIndexCurrent = new System.Windows.Forms.Label();
+            this.buttonTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStartIndex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStopIndex)).BeginInit();
             this.SuspendLayout();
@@ -181,11 +182,22 @@
             this.labelIndexCurrent.TabIndex = 14;
             this.labelIndexCurrent.Text = "0";
             // 
+            // buttonTest
+            // 
+            this.buttonTest.Location = new System.Drawing.Point(369, 111);
+            this.buttonTest.Name = "buttonTest";
+            this.buttonTest.Size = new System.Drawing.Size(36, 23);
+            this.buttonTest.TabIndex = 15;
+            this.buttonTest.Text = "Test";
+            this.buttonTest.UseVisualStyleBackColor = true;
+            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 441);
+            this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.labelIndexCurrent);
             this.Controls.Add(this.labelIndex);
             this.Controls.Add(this.progressBar1);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label labelIndex;
         private System.Windows.Forms.Label labelIndexCurrent;
+        private System.Windows.Forms.Button buttonTest;
     }
 }
 

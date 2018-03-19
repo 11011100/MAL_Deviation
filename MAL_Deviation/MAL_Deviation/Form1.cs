@@ -22,10 +22,29 @@ namespace MAL_Deviation
         private void buttonSavePath_Click(object sender, EventArgs e)
         {
             
+            
         }
 
-
-
-
+        private void buttonTest_Click(object sender, EventArgs e)
+        {
+            //Testing mean and deviation calculation
+            
+            Score[] scores = new Score[10]
+            {
+                new Score(6.25, 1),
+                new Score(6.25, 1),
+                new Score(12.5, 2),
+                new Score(18.75, 3),
+                new Score(6.25, 1),
+                new Score(18.75, 3),
+                new Score(12.5, 2),
+                new Score(6.25, 1),
+                new Score(6.25, 1),
+                new Score(6.25, 1)
+            };
+            Stats stats = new Stats(scores);
+            stats.update();
+            
+        }
     }
 }
