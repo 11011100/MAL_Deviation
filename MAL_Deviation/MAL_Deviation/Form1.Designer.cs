@@ -120,6 +120,11 @@
             this.numericUpDownStopIndex.Name = "numericUpDownStopIndex";
             this.numericUpDownStopIndex.Size = new System.Drawing.Size(91, 20);
             this.numericUpDownStopIndex.TabIndex = 7;
+            this.numericUpDownStopIndex.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // buttonStart
             // 
@@ -129,6 +134,7 @@
             this.buttonStart.TabIndex = 8;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonStop
             // 
