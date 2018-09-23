@@ -144,6 +144,7 @@
             this.buttonStop.TabIndex = 9;
             this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // labelStatus
             // 
@@ -220,7 +221,7 @@
             this.Controls.Add(this.textBoxSavePath);
             this.Controls.Add(this.textBoxConsole);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MAL Deviation";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStartIndex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStopIndex)).EndInit();
             this.ResumeLayout(false);

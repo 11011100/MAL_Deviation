@@ -8,8 +8,8 @@ namespace MAL_Deviation
 {
     class Score
     {
-        double _percent = 0;
-        int _votes = 0;
+        Double _percent = 0;
+        Int32 _votes = 0;
 
         public Score()
         {
@@ -17,13 +17,13 @@ namespace MAL_Deviation
             this._votes = 0;
         }
 
-        public Score(double percent, int votes)
+        public Score(Double percent, Int32 votes)
         {
             this._percent = percent;
             this._votes = votes;
         }
 
-        public double Percent
+        public Double Percent
         {
             get
             {
@@ -34,7 +34,7 @@ namespace MAL_Deviation
                 _percent = value;
             }
         }
-        public int Votes
+        public Int32 Votes
         {
             get
             {

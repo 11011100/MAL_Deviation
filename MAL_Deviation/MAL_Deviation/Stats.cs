@@ -10,14 +10,14 @@ namespace MAL_Deviation
     {
         //Fields
         Score[] _scores = new Score[10];
-        double _mean = 0;
-        double _deveation = 0.0;
-        int _totalVotes = 0;
+        Double _mean = 0;
+        Double _deviation = 0.0;
+        Int32 _totalVotes = 0;
 
         //Constructors
         public Stats()
         {
-            for(int i=0; i<10; i++)
+            for(Int32 i=0; i<10; i++)
             {
                 _scores[i] = new Score(0.0, 0);
             }
@@ -28,21 +28,21 @@ namespace MAL_Deviation
         }
 
         //Properties
-        public double Mean
+        public Double Mean
         {
             get
             {
                 return _mean;
             }
         }
-        public double Deveation
+        public Double Deveation
         {
             get
             {
-                return _deveation;
+                return _deviation;
             }
         }
-        public int TotalVotes
+        public Int32 TotalVotes
         {
             get
             {
@@ -61,6 +61,10 @@ namespace MAL_Deviation
             }
         }
 
+
+        //Methods update() and get...() could be omitted, if the calculation is
+        //included in the get part of the properties
+
         //Methods
         public void update()
         {
@@ -73,24 +77,24 @@ namespace MAL_Deviation
         private void getMean()
         {
             _mean = 0;
-            for (int i = 0; i < 10; i++)
+            for (Int32 i = 0; i < 10; i++)
             {
                 _mean += _scores[i].Percent/100 * (10 - i);
             }
         }
         private void getDeviation()
         {
-            double variance = 0;
-            for(int i=0; i<10; i++)
+            Double variance = 0;
+            for(Int32 i=0; i<10; i++)
             {
                 variance += _scores[i].Percent / 100 * Math.Pow((10-i)-_mean, 2);
             }
-            _deveation = Math.Sqrt(variance);
+            _deviation = Math.Sqrt(variance);
         }
         private void getTotalVotes()
         {
             _totalVotes = 0;
-            for(int i=0; i<10; i++)
+            for(Int32 i=0; i<10; i++)
             {
                 _totalVotes += _scores[i].Votes;
             }

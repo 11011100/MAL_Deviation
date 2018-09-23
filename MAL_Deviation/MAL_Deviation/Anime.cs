@@ -9,12 +9,12 @@ namespace MAL_Deviation
     class Anime
     {
         //Fields
-        int     _id;
-        string  _name;
+        Int32   _id;
+        String  _name;
         Stats   _stats;
 
         //Constructor
-        public Anime(int id, string name, Stats stats)
+        public Anime(Int32 id, String name, Stats stats)
         {
             this._id    = id;
             this._name  = name;
@@ -22,8 +22,8 @@ namespace MAL_Deviation
         }
 
         //Properties
-        public int      Id { get; set; }
-        public string   Name { get; set; }
+        public Int32      Id { get; set; }
+        public String   Name { get; set; }
         public Stats    Stats { get; set; }
 
 
