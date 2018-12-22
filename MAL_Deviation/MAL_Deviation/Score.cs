@@ -8,9 +8,11 @@ namespace MAL_Deviation
 {
     class Score
     {
+        //Fields
         Double _percent = 0;
         Int32 _votes = 0;
 
+        //Constructors
         public Score()
         {
             this._percent = 0;
@@ -23,6 +25,8 @@ namespace MAL_Deviation
             this._votes = votes;
         }
 
+
+        //Properties
         public Double Percent
         {
             get

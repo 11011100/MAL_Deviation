@@ -19,7 +19,7 @@ namespace MAL_Deviation
         String      _folderPath;
         List<Anime> _animeList = new List<Anime>();
         Int32       _currentIndex = 0;
-        Status _currentStatus;
+        Status      _currentStatus;
 
         //Properties
         public Status CurrentStatus
@@ -28,7 +28,7 @@ namespace MAL_Deviation
             set
             {
                 _currentStatus = value;
-                OnStatusChanged();
+                OnStatusChanged();          //Despite its name this is not implemented as an event
             }
         }
 
@@ -40,7 +40,7 @@ namespace MAL_Deviation
         }
 
         //Custom Event, to executed when the Status changes (e.g. Stopp -> Running)
-        public event System.EventHandler StatusChanged;
+        //public event System.EventHandler StatusChanged;
         protected virtual void OnStatusChanged()
         {
             switch (CurrentStatus)
@@ -123,7 +123,7 @@ namespace MAL_Deviation
             buttonStart.Text = "Pause";
 
             //Why here?
-            progressBar1.Value = _currentIndex*100 / (int) (numericUpDownStopIndex.Value + numericUpDownStartIndex.Value);
+            //progressBar1.Value = _currentIndex*100 / (int) (numericUpDownStopIndex.Value + numericUpDownStartIndex.Value);
 
         }
 
